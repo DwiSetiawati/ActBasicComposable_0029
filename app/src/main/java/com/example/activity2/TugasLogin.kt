@@ -2,6 +2,7 @@ package com.example.activity2
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -68,11 +69,24 @@ fun TugasLogin(modifier: Modifier = Modifier) {
 
             Spacer(modifier = Modifier.height(24.dp))
 
-            Image(
-                painter = painterResource(id = R.drawable.logo_umy),
-                contentDescription = "Logo UMY",
-                modifier = Modifier.size(130.dp)
-            )
+            // Logo UMY: lingkaran putih + logo dipotong bulat (sudut hitam hilang)
+            Box(
+                modifier = Modifier
+                    .size(132.dp)
+                    .clip(CircleShape)
+                    .background(Color.White)
+                    .border(3.dp, EmasAksen, CircleShape),
+                contentAlignment = Alignment.Center
+            ) {
+                Image(
+                    painter = painterResource(id = R.drawable.logo_umy),
+                    contentDescription = "Logo UMY",
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier
+                        .size(116.dp)
+                        .clip(CircleShape)
+                )
+            }
 
             Spacer(modifier = Modifier.height(48.dp))
 
