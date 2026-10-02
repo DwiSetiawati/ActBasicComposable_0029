@@ -58,9 +58,9 @@ fun TugasLogin(modifier: Modifier = Modifier) {
         ) {
             Text(
                 text = "Login",
-                color = Color.Blue,
+                color = Color.White,
                 fontSize = 32.sp,
-                fontWeight = FontWeight.Bold
+                fontWeight = FontWeight.ExtraBold
             )
             Text(
                 text = "Ini adalah halaman login,",
