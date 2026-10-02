@@ -18,6 +18,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -147,6 +148,14 @@ fun TugasBoxColumnRow(modifier: Modifier) {
                 painter = gambar,
                 contentDescription = null,
                 contentScale = ContentScale.Fit
+            )
+            Text(
+                text = "My Music",
+                fontSize = 56.sp,
+                color = Color(0xFF6A1B9A),
+                fontWeight = FontWeight.ExtraBold,
+                fontFamily = FontFamily.Serif,
+                modifier = Modifier.align(Alignment.Center)
             )
         }
     }
