@@ -91,7 +91,12 @@ fun TugasLogin(modifier: Modifier = Modifier) {
                     .background(Color(0xFFE6E6F5)),
                 contentAlignment = Alignment.Center
             ) {
-
+                Image(
+                    painter = painterResource(id = R.drawable.brain),
+                    contentDescription = null,
+                    contentScale = ContentScale.Fit,
+                    modifier = Modifier.fillMaxSize()
+                )
             }
         }
     }
