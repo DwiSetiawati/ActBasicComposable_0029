@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
@@ -17,9 +18,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.shadow.Shadow
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -57,15 +63,49 @@ fun TugasLogin(modifier: Modifier = Modifier) {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
-                text = "Login",
-                color = Color.White,
-                fontSize = 32.sp,
-                fontWeight = FontWeight.ExtraBold
+                text = "LOGIN",
+                fontSize = 38.sp,
+                fontWeight = FontWeight.Black,
+                letterSpacing = 8.sp,
+                style = TextStyle(
+                    brush = Brush.horizontalGradient(
+                        colors = listOf(Color.White, CyanAksen)
+                    ),
+                    shadow = androidx.compose.ui.graphics.Shadow(
+                        color = Color(0xFF000000),
+                        offset = Offset(2f, 4f),
+                        blurRadius = 8f
+                    )
+                )
             )
+
+            Spacer(modifier = Modifier.height(6.dp))
+
+            Box(
+                modifier = Modifier
+                    .width(90.dp)
+                    .height(3.dp)
+                    .clip(RoundedCornerShape(50))
+                    .background(
+                        Brush.horizontalGradient(listOf(CyanAksen, EmasAksen))
+                    )
+            )
+
+            Spacer(modifier = Modifier.height(8.dp))
+
             Text(
                 text = "Ini adalah halaman login,",
-                color = Color.White,
-                fontSize = 14.sp
+                color = PutihLembut,
+                fontSize = 14.sp,
+                fontStyle = FontStyle.Italic,
+                letterSpacing = 1.sp,
+                style = TextStyle(
+                    shadow = androidx.compose.ui.graphics.Shadow(
+                        color = Color(0xFF000000),
+                        offset = Offset(1f, 2f),
+                        blurRadius = 4f
+                    )
+                )
             )
 
             Spacer(modifier = Modifier.height(24.dp))
