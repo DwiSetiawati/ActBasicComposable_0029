@@ -54,3 +54,25 @@ fun TugasBox(modifier: Modifier) {
         Text(text = "Column 2", fontSize = 8.sp)
     }
 }
+
+@Composable
+fun TugasColumnRow(modifier: Modifier) {
+    Column {
+        Row(
+            modifier = modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceEvenly
+        ) {
+            Text(text = "Komponen1Baris1", color = Color.Blue)
+            Text(text = "Komponen2Baris1", color = Color.Blue)
+            Text(text = "Komponen3Baris1", color = Color.Blue)
+        }
+        Row(
+            modifier = modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceEvenly
+        ) {
+            Text(text = "Komponen1Baris2", color = Color.Magenta)
+            Text(text = "Komponen2Baris2", color = Color.Magenta)
+            Text(text = "Komponen3Baris2", color = Color.Magenta)
+        }
+    }
+}
