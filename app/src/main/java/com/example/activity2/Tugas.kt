@@ -76,3 +76,22 @@ fun TugasColumnRow(modifier: Modifier) {
         }
     }
 }
+
+@Composable
+fun TugasRowColumn(modifier: Modifier) {
+    Row(
+        modifier = modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.SpaceEvenly
+    ) {
+        Column {
+            Text(text = "Komponen1Kolom1", color = Color(0xFF00695C))
+            Text(text = "Komponen2Kolom1", color = Color(0xFF00695C))
+            Text(text = "Komponen3Kolom1", color = Color(0xFF00695C))
+        }
+        Column {
+            Text(text = "Komponen1Kolom2", color = Color(0xFFEF6C00))
+            Text(text = "Komponen2Kolom2", color = Color(0xFFEF6C00))
+            Text(text = "Komponen3Kolom2", color = Color(0xFFEF6C00))
+        }
+    }
+}
