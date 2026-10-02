@@ -22,6 +22,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
+private val CyanAksen = Color(0xFF4FC3F7)
+private val EmasAksen = Color(0xFFFFD54F)
+private val PutihLembut = Color(0xFFEAF6FF)
+private val KartuGelap = Color(0xB3081A2E)
+private val LapisanGelap = Color(0x66000000)
+
 @Composable
 fun TugasLogin(modifier: Modifier = Modifier) {
     Box(modifier = modifier.fillMaxSize()) {
