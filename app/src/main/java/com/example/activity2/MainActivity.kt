@@ -16,13 +16,19 @@ import com.example.activity2.ui.theme.Activity2Theme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
         setContent {
             Activity2Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    // Memanggil composable Layout utama dengan padding dari Scaffold
-                    TataletakBoxColumnRow(
-                        modifier = Modifier.padding(innerPadding)
-                    )
+
+                    // 1. Modul asli (TataLetak.kt)
+                    // TataletakBoxColumnRow(modifier = Modifier.padding(innerPadding))
+
+                    // 2. Style diubah (Tugas.kt)
+                    // TugasBoxColumnRow(modifier = Modifier.padding(innerPadding))
+
+                    // 3. Halaman login (TugasLogin.kt)
+                    TugasLogin(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
