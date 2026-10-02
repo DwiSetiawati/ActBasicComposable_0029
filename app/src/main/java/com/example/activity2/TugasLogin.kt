@@ -40,7 +40,14 @@ fun TugasLogin(modifier: Modifier = Modifier) {
             modifier = Modifier.fillMaxSize()
         )
 
-        // Lapisan 2: konten
+        // Lapisan 2: lapisan gelap tipis supaya teks lebih terbaca
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(LapisanGelap)
+        )
+
+        // Lapisan 3: konten
         Column(
             modifier = Modifier
                 .fillMaxSize()
